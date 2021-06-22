@@ -1,15 +1,23 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Redirect} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Redirect, Switch} from 'react-router-dom';
+
 
 import Users from './user/pages/Users'
+import NewPlace from './places/pages/NewPlace';
 
 const App = () => {
   return (
   <Router>
+    <Switch>
     <Route path="/" exact> //'exact will ensure that only '/' works and anything beyond that slash will not fetch the same result as '/'
       <Users />
     </Route>
-    <Redirect to ="/" /> This redirect will redirect the unmade links to the specified page which is '/'
+    <Route path = "/places/new" exact>
+      <NewPlace />
+    </Route>
+    <Redirect to ="/" /> 
+    
+    </Switch>
   </Router>
   );
 };
