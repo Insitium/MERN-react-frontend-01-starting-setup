@@ -8,10 +8,13 @@ import { BrowserRouter as Router,
 
 import Users from './user/pages/Users'
 import NewPlace from './places/pages/NewPlace';
+import MainNavigation from './shared/components/Navigation/MainNavigation';
 
 const App = () => {
   return (
   <Router>
+    <MainNavigation />
+    <main>
     <Switch>
     <Route path="/" exact> //'exact will ensure that only '/' works and anything beyond that slash will not fetch the same result as '/'
       <Users />
@@ -22,6 +25,7 @@ const App = () => {
     <Redirect to ="/" /> 
     
     </Switch>
+    </main>
   </Router>
   );
 };
