@@ -21,13 +21,12 @@ const App = () => {
       <Users />
     </Route>
     <Route path="/:userId/places" exact>
-      <UserPlaces />
+    <UserPlaces />
     </Route>
     <Route path = "/places/new" exact>
       <NewPlace />
     </Route>
     <Redirect to ="/" /> 
-    
     </Switch>
     </main>
   </Router>
@@ -35,3 +34,11 @@ const App = () => {
 };
 
 export default App;
+
+//the :userID in </Route>
+    //<Route path="/:userId/places" exact>
+    //<UserPlaces />
+ // </Route>
+ //is the dynamic link which can be changed and does not need to be fixed
+
+ 
